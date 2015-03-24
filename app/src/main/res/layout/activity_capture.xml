@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#0099cc" tools:context=".Capture">
+    android:layout_height="match_parent" android:background="@android:color/background_dark" tools:context=".Capture">
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -8,40 +8,40 @@
         android:fitsSystemWindows="true"
         android:layout_gravity="center">
 
-        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay" android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/capture_button"
-                android:id="@+id/btn_capture"
-                android:layout_weight="0.23"
-                android:clickable="true"
-                android:enabled="true" />
-
-            <Button android:id="@+id/btn_continue" style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.45"
-                android:text="@string/continue_button"
-                android:clickable="true"
-                android:enabled="true" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/img_captured"
-            android:layout_gravity="center"
-            android:contentDescription="CaptureImage"
-            android:background="@mipmap/ic_launcher"
-            android:cropToPadding="false" />
-
     </FrameLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/img_captured"
+        android:contentDescription="@string/Capture_Image"
+        android:cropToPadding="false"
+        android:layout_marginBottom="35dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/black_overlay" android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capture_button"
+            android:id="@+id/btn_capture" style="?metaButtonBarButtonStyle"
+            android:layout_weight="0.23"
+            android:clickable="true"
+            android:enabled="true" />
+
+        <Button android:id="@+id/btn_continue" style="?metaButtonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="@string/continue_button"
+            android:clickable="true"
+            android:enabled="true" />
+
+    </LinearLayout>
 
 </FrameLayout>
